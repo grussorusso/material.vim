@@ -1,15 +1,19 @@
 # material.vim
 
-A port of the [Material](https://material-theme.site) color scheme for Vim/Neovim.
-
-![](https://raw.githubusercontent.com/kaicataldo/material.vim/master/screenshots/material-all-variants.png)
+A port of the [Material](https://material-theme.site) color scheme for Vim/Neovim,
+with a few customizations.
 
 ## Installation
 
 Using [vim-plug](https://github.com/junegunn/vim-plug) (modify this to work with your Vim package manager of choice):
 
+For the original version:
 ```vim
 Plug 'kaicataldo/material.vim'
+```
+For my own version:
+```vim
+Plug 'grussorusso/material.vim', {'branch': 'main'}
 ```
 
 ## Usage
@@ -72,9 +76,6 @@ let g:lightline = { 'colorscheme': 'material_vim' }
 
 The theme will change to match the theme option specified.
 
-Note: The included theme is called `material_vim` because lightline.vim comes with its own version of a material theme (which does not change based on the theme version selected).
-
-### airline.vim
 
 To use the included [vim-airline](https://github.com/vim-airline/vim-airline) theme:
 
@@ -86,9 +87,6 @@ let g:airline_theme = 'material'
 
 Corresponding terminal color schemes are included in this repo. You can find them [here](https://github.com/kaicataldo/material.vim/tree/master/terminal-colors/).
 
-#### Vim in macOS
-
-The default version of `vim` on `macOS` doesn't support `termguicolors`. In order for the colorscheme to work properly you need to apply the terminal colors from above. Or you can install the latest version from `brew`.
 
 ## Thanks
 
