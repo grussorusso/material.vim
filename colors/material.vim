@@ -55,10 +55,13 @@ let s:bg = { 'gui': '#263238', 'cterm': 'none' }
 let s:fg = { 'gui': '#eeffff', 'cterm': 231 }
 let s:invisibles = { 'gui': '#65738e', 'cterm': 66 }
 let s:comments = { 'gui': '#546e7a', 'cterm': 145 }
+let s:comments_hl = { 'gui': '#90a2ab', 'cterm': 145 }
 let s:caret = { 'gui': '#ffcc00', 'cterm': 220 }
 let s:selection = { 'gui': '#2c3b41', 'cterm': 239 }
+let s:selection_hl = { 'gui': '#c3e88d', 'cterm': 2 }
 let s:guides = { 'gui': '#37474f', 'cterm': 17 }
 let s:line_numbers = { 'gui': '#37474f', 'cterm': 145 }
+let s:line_numbers_hl = { 'gui': '#546873', 'cterm': 145 }
 let s:line_highlight = { 'gui': '#1a2327', 'cterm': 235 }
 let s:white = { 'gui': '#ffffff', 'cterm': 231 }
 let s:black = { 'gui': '#000000', 'cterm': 232 }
@@ -162,14 +165,14 @@ call s:SetHighlight('CursorColumn', '', s:line_highlight, '')
 call s:SetHighlight('CursorLine', '', s:line_highlight, '')
 call s:SetHighlight('CursorLineNr', s:comments, '', '')
 call s:SetHighlight('Directory', s:blue, '', '')
-call s:SetHighlight('DiffAdd', s:green, s:bg, '')
+call s:SetHighlight('DiffAdd', s:purple, s:green, '')
 call s:SetHighlight('DiffDelete', s:red, s:bg, '')
-call s:SetHighlight('DiffChange', s:yellow, s:bg, '')
+call s:SetHighlight('DiffChange', s:white, s:orange, '')
 call s:SetHighlight('DiffText', s:orange, s:bg, '')
 call s:SetHighlight('ErrorMsg', s:bg, s:red, 'bold')
 call s:SetHighlight('FoldColumn', s:line_numbers, s:bg, '')
 call s:SetHighlight('Folded', s:brown, s:bg, 'bold')
-call s:SetHighlight('LineNr', s:line_numbers, '', '')
+call s:SetHighlight('LineNr', s:line_numbers_hl, '', '')
 call s:SetHighlight('MatchParen', s:comments, s:cyan, 'bold')
 call s:SetHighlight('ModeMsg', s:green, '', '')
 call s:SetHighlight('MoreMsg', s:green, '', '')
@@ -180,8 +183,8 @@ call s:SetHighlight('PmenuSel', s:bg, s:cyan, '')
 call s:SetHighlight('PmenuSbar', '', s:selection, '')
 call s:SetHighlight('PmenuThumb', '', s:comments, '')
 call s:SetHighlight('Question', s:blue, '', '')
-call s:SetHighlight('IncSearch', s:white, s:comments, 'none')
-call s:SetHighlight('Search', s:white, s:comments, 'none')
+call s:SetHighlight('IncSearch', s:white, s:blue, 'none')
+call s:SetHighlight('Search', s:white, s:blue, 'none')
 call s:SetHighlight('SignColumn', s:fg, s:bg, '')
 call s:SetHighlight('SpecialKey', s:comments, '', '')
 call s:SetHighlight('SpellCap', s:blue, '', 'undercurl')
@@ -195,12 +198,12 @@ call s:SetHighlight('TabLineFill', s:fg, s:selection, '')
 call s:SetHighlight('TabLineSel', s:bg, s:cyan, '')
 call s:SetHighlight('Title', s:green, '', '')
 call s:SetHighlight('VertSplit', s:comments, '', '')
-call s:SetHighlight('Visual', s:fg, s:selection, '')
+call s:SetHighlight('Visual', s:fg, s:selection_hl, '')
 call s:SetHighlight('WarningMsg', s:red, '', '')
 call s:SetHighlight('WildMenu', s:bg, s:cyan, '')
 
 " Syntax
-call s:SetHighlight('Comment', s:comments, '', 'italic')
+call s:SetHighlight('Comment', s:comments_hl, '', 'italic')
 call s:SetHighlight('Conceal', s:brown, s:bg, '')
 call s:SetHighlight('Constant', s:orange, '', '')
 call s:SetHighlight('String', s:green, '', '')
